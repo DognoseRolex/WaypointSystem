@@ -9,6 +9,7 @@ Points (Transform[]): the waypoint sequence NPCs will follow.
 Convenience: If Points is not assigned, OnValidate() auto-fills it using the GameObject’s children (in hierarchy order).
 
 Visualization: OnDrawGizmos() draws cyan spheres and lines between waypoints in the Scene view, making the route easy to inspect and debug.
+
 <img width="266" height="535" alt="image" src="https://github.com/user-attachments/assets/ae454ee1-9647-43ac-99e6-9e0d853723e5" />
 <img width="421" height="422" alt="image" src="https://github.com/user-attachments/assets/a3e00e41-04e3-4932-a6fe-2e7abc1c4b51" />
 
@@ -35,19 +36,30 @@ Attach WaypointBlinkInstruction to any waypoint Transform to set the NPC’s bli
 
 ## Quick Start
 
-Create a path
+# Create a path
 
 Empty GameObject → add WaypointPath
 
 Create children waypoints in order (this becomes Points[])
 
-Create an NPC
+# Create an NPC
 
 Add a Rigidbody + Box Collider + WaypointCar + Wheel Visual Animator + Blinker Light
 <img width="1315" height="762" alt="image" src="https://github.com/user-attachments/assets/84b32817-3bb7-4f9f-b9ed-2b4e9e73b0f2" />
 
+NPC hierachy:
+<img width="216" height="337" alt="image" src="https://github.com/user-attachments/assets/22a83efc-fcc7-46d9-be99-eccbc8e61d0b" />
 
-Assign:
+
+# Wheel configueration for animation:
+1. Two Axis (one for steer, one for spin)
+<img width="1017" height="483" alt="image" src="https://github.com/user-attachments/assets/d77646ef-2de2-49bd-bea9-020a0545bece" />
+
+<img width="966" height="459" alt="image" src="https://github.com/user-attachments/assets/46026d8f-7da8-43d0-b1a3-af500e495012" />
+<img width="393" height="455" alt="image" src="https://github.com/user-attachments/assets/96bb10ba-fe38-49c6-99a8-9a9bcff84198" />
+
+
+# Assign:
 
 path (your WaypointPath)
 
